@@ -21,7 +21,7 @@ print(Sample_List)
  
 #Write a program that takes in the user input of his favourite colour and adds it to an existing list of colours.
 color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
-user_list=['orange', 'blue', 'grey' ,'purple']
+user_list=input("favorite color=")
 color_list.extend(user_list)
 print(color_list)
 
