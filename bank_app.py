@@ -115,10 +115,53 @@ while True:
             print("Invalid Login")
             
     elif choice == 's':
-        name = input("Enter your name:\n>")
-        dob= input("Enter your date of birth:\n>")
-        bvn= input("Enter your BVN:\n>")
-        pin = input("Enter your PIN:\n>")
+        def validate_name(name):
+            is_valid=True
+            if not any(char.islower() for char in name):
+              print("invalid input")
+              isValid= False
+            if not any(char.isupper() for char in name):
+              print("invalid input")
+              isValid= False
+            else:
+                print("valid input")
+        name=input("please enter name\n>")
+        validate_name(name)
+        def validate_dob(dob):
+            is_valid=True
+
+            if not any(char.isdigit() for char in dob):
+              print("invalid input")
+              is_valid=False
+            else:
+             print("valid input")
+        dob=input("please enter dob\n>")
+        validate_dob(dob)
+        def validate_bvn(bvn):
+            is_valid=True
+
+            if not any(char.isdigit()for char in bvn):
+                print("invalid input")
+                is_valid=False
+            else:
+                print("valid input")
+        bvn=input("please enter bvn\n>")
+        validate_bvn(bvn)
+        def validate_pin(pin):
+            is_valid=True
+
+            if not any(char.isdigit() for char in pin):
+               print("invalid input")
+               is_valid=False
+            else:
+              print("valid input")
+        pin=input("please enter password\n>")
+        validate_pin(pin)
+
+
+     
+        
+        
         details = [('name', name), 
                 ('dob', dob), 
                 ('bvn', bvn), 
